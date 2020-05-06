@@ -1,0 +1,14 @@
+typeset -g -A key
+
+key[Backspace]='^?'
+key[Delete]='^[[3~'
+key[Home]='^[[H'
+key[End]='^[[F'
+key[PageUp]='^[[5~'
+key[PageDown]='^[[6~'
+key[Up]='^[[A'
+key[Left]='^[[D'
+key[Down]='^[[B'
+key[Right]='^[[C'
+key[CtrlLeft]='^[[1;5D'
+key[CtrlRight]='^[[1;5C'

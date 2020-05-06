@@ -18,10 +18,17 @@ add-zsh-hook precmd precmd_pipestatus
 autoload -U compinit
 compinit
 
+source ~/.zkbd/$TERM-${${DISPLAY:t}:-$VENDOR-$OSTYPE}
+bindkey -e
+bindkey "${key[Home]}"       beginning-of-line
+bindkey "${key[End]}"        end-of-line
+bindkey "${key[Delete]}"     delete-char
+bindkey "${key[CtrlLeft]}"  emacs-backward-word
+bindkey "${key[CtrlRight]}"  emacs-forward-word
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-bindkey -e
 
