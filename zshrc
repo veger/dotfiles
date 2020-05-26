@@ -18,7 +18,7 @@ add-zsh-hook precmd precmd_pipestatus
 autoload -U compinit
 compinit
 
-source ~/.zkbd/$TERM-${${DISPLAY:t}:-$VENDOR-$OSTYPE}
+source ~/.zkbd/$TERM
 bindkey -e
 bindkey "${key[Home]}"       beginning-of-line
 bindkey "${key[End]}"        end-of-line
