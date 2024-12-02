@@ -1,4 +1,5 @@
 fpath+=($HOME/.zsh/pure)
+
 autoload -U promptinit; promptinit
 
 function virtualenv_info {
@@ -33,7 +34,7 @@ bindkey "${key[Delete]}"     delete-char
 bindkey "${key[CtrlLeft]}"   emacs-backward-word
 bindkey "${key[CtrlRight]}"  emacs-forward-word
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/syntax-highlighting/zsh-syntax-highlighting.zsh
 
 HISTFILE=~/.histfile
 HISTSIZE=1000

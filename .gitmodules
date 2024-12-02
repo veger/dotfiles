@@ -1,3 +1,6 @@
 [submodule "plugins/pure"]
 	path = plugins/pure
 	url = https://github.com/sindresorhus/pure.git
+[submodule "plugins/syntax-highlighting"]
+	path = plugins/syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
