@@ -1,0 +1,3 @@
+[submodule "plugins/pure"]
+	path = plugins/pure
+	url = https://github.com/sindresorhus/pure.git

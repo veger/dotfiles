@@ -1,3 +1,4 @@
+fpath+=($HOME/.zsh/pure)
 autoload -U promptinit; promptinit
 
 function virtualenv_info {
