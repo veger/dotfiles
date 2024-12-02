@@ -34,7 +34,7 @@ bindkey "${key[Delete]}"     delete-char
 bindkey "${key[CtrlLeft]}"   emacs-backward-word
 bindkey "${key[CtrlRight]}"  emacs-forward-word
 
-source $HOME/.zsh/syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 HISTFILE=~/.histfile
 HISTSIZE=1000
