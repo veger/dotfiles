@@ -2,8 +2,9 @@
 #
 # Add to ~/.ssh/config:
 #
-# Host *
-#	ProxyCommand ~/.ssh/keepassxc-prompt %h %p
+#Host *
+#	Match exec "test \"${GIT_TERMINAL_PROMPT:-1}\" != 0"
+#		ProxyCommand ~/.ssh/keepassxc-prompt %h %p
 set -euo pipefail
 
 host="$1"
