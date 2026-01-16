@@ -42,7 +42,7 @@ SAVEHIST=1000
 
 export EDITOR=vim
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export PATH="$PATH:$HOME/devel/go/bin"
+export PATH="$PATH:$HOME/devel/go/bin:$HOME/.local/bin:$PATH"
 
 alias ls='ls --color=auto'
 
