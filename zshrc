@@ -44,5 +44,11 @@ export EDITOR=vim
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export PATH="$PATH:$HOME/devel/go/bin:$HOME/.local/bin:$PATH"
 
+if [ $(hostnamectl hostname) = "i7v2" ]; then
+  export GTK_IM_MODULE=fcitx
+  export QT_IM_MODULE=fcitx
+  export XMODIFIERS=@im=fcitx
+fi
+
 alias ls='ls --color=auto'
 
