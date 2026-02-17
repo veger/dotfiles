@@ -8,20 +8,32 @@ function virtualenv_info {
 
 zstyle :prompt:pure:git:stash show yes
 prompt pure
-PROMPT="%(?.%F{magenta}❯.%F{red}❌)%f "
-PROMPT="%(1j.%F{242}[%j]%f .)$PROMPT"
 
-precmd_pipestatus() {
-  RPROMPT="${(j.|.)pipestatus}"
-  if [[ $RPROMPT = 0 ]]; then
-    RPROMPT=""
-  else
-    RPROMPT=" %(?.%F{242}[$RPROMPT].%F{red}[$RPROMPT])%f"
+# Function to format pipe statuses: red for errors, normal for 0
+show_pipe_errors() {
+  # Save pipestatus immediately before it's cleared by other commands
+  local statuses=("${pipestatus[@]}")
+
+  # Hide if everything succeeded (all zeros)
+  if [[ ${(j..)${statuses:#0}} == "" ]]; then
+    return
   fi
 
-  RPROMPT="$(virtualenv_info)$RPROMPT"
+  local out=()
+  for code in $statuses; do
+    if [[ $code -ne 0 ]]; then
+      out+="%F{red}$code%f"
+    else
+      out+="0"
+    fi
+  done
+
+  # Output the formatted list inside brackets
+  echo "[${(j.|.)out}]"
 }
-add-zsh-hook precmd precmd_pipestatus
+
+# Set the Right-Hand Prompt to show the errors
+RPROMPT='$(show_pipe_errors)'
 
 autoload -U compinit
 compinit
