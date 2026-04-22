@@ -4,6 +4,7 @@ fi
 
 fpath+=($HOME/.zsh/pure)
 
+
 autoload -U promptinit; promptinit
 
 function virtualenv_info {
@@ -12,6 +13,9 @@ function virtualenv_info {
 
 zstyle :prompt:pure:git:stash show yes
 prompt pure
+
+fpath+=($HOME/.zsh/zsh-claudecode-completion)
+autoload -Uz compinit && compinit
 
 # Function to format pipe statuses: red for errors, normal for 0
 show_pipe_errors() {
