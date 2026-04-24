@@ -12,6 +12,7 @@ font-size = 11
 window-padding-x = 2
 window-padding-y = 2
 window-decoration = true
+gtk-tabs-location = bottom
 
 # Locally use the best features, but act like xterm for remote servers
 shell-integration-features = ssh-env,ssh-terminfo
