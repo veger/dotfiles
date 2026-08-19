@@ -26,8 +26,8 @@ window-decoration = auto
 # Tabs Alignment
 gtk-tabs-location = bottom
 
-# Locally use the best features, but act like xterm for remote servers
-shell-integration-features = ssh-env,ssh-terminfo
+# Locally use the best features, but act like xterm(-256color) for remote servers
+shell-integration-features = ssh-env
 
 keybind = shift+left=previous_tab
 keybind = shift+right=next_tab
