@@ -36,3 +36,6 @@ keybind = ctrl+shift+K=clear_screen
 
 # Copy on selection, otherwise send interrupt
 keybind = performable:ctrl+c=copy_to_clipboard
+
+# 4GB
+scrollback-limit = 4294967295
